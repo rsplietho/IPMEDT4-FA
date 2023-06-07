@@ -1,0 +1,25 @@
+.negative > path {
+  fill: #e8200d;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left !important;
+}
+.stat > p {
+  margin: 0 0.4rem;
+  padding: 0;
+}
+
+.analytics-card {
+  background: var(--white);
+  box-shadow: var(--shadow-1);
+  border-radius: 8px;
+  padding: 0.2rem 0.8rem;
+}
+
+#last-month {
+  color: var(--black-60);
+}

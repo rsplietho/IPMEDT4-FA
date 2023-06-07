@@ -1,0 +1,17 @@
+.monthly-analytics {
+  margin-top: 2rem;
+}
+
+.monthly-analytics > h2 {
+  color: var(--black-85);
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}

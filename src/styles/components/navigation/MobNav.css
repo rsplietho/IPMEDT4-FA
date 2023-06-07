@@ -1,0 +1,10 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background: #fff;
+}
+.mob-logo {
+  transform: scale(0.3);
+}

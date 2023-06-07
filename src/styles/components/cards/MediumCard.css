@@ -1,0 +1,33 @@
+.medium-card {
+  background: var(--white);
+  box-shadow: var(--shadow-1);
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.medium-card > h4 {
+  color: var(--secondary-tint-1);
+  margin-bottom: 0;
+}
+.time {
+  color: var(--secondary-shade-1);
+  margin-bottom: 1rem;
+}
+
+.medium-card > button {
+  background: var(--secondary-tint-3);
+  color: var(--white);
+  border-radius: 3px;
+  border: none;
+  width: 90%;
+  height: 1.7rem;
+  font-family: var(--font-family-sans-serif);
+}
+
+.rentee {
+  color: var(--secondary-tint-1);
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}

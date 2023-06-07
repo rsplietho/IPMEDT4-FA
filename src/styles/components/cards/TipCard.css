@@ -1,0 +1,7 @@
+.tip-card {
+  color: var(--secondary-tint-1);
+  background: var(--secondary-tint-5);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
