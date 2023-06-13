@@ -2,7 +2,7 @@ import axios from 'axios';
 const GET_CARS_REQUEST = 'GET_CARS_REQUEST';
 const GET_CARS_SUCCESS = 'GET_CARS_SUCCESS';
 const GET_CARS_FAIL = 'GET_CARS_FAIL';
-const GET_CARS_RESET = 'GET_CARS_RESET';
+export const GET_CARS_RESET = 'GET_CARS_RESET';
 export const getCars = () => async (dispatch) => {
   try {
     dispatch({
