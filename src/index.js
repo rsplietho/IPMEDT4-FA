@@ -12,6 +12,7 @@ import {
 import Home from './views/Home';
 import { Provider } from 'react-redux';
 import AllCars from './components/ui/cars/AllCars';
+import Login from './views/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<App />}>
       <Route path='' element={<Home />} />
       <Route path='/testing' element={<AllCars />} />
+      <Route path='/login' element={<Login />} />
     </Route>
   )
 );
