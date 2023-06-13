@@ -4,7 +4,10 @@ import { ReactComponent as Dash } from '../../assets/dash.svg';
 import '../../styles/components/cards/AnalyticsCard.css';
 const AnalyticsCard = ({ title, value, stat }) => {
   return (
-    <section aria-details='A card of analytics of your income'>
+    <section
+      className='content'
+      aria-details='A card of analytics of your income'
+    >
       <h3>{title}</h3>
       <div className='analytics-card'>
         <p className='copy-bold'>

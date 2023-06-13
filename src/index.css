@@ -93,12 +93,18 @@ a {
 }
 @media (min-width: 451px ) and (max-width: 768px) {
   .container {
-    max-width: 70vw;
+    max-width: 65vw;
   }
 }
-@media (min-width: 768px)  {
+@media (min-width: 768px)  and (max-width: 2000px){
   .container {
     max-width: 60vw;
+  }
+}
+
+@media (min-width: 2000px) {
+  .container {
+    max-width: 40vw;
   }
 }
 

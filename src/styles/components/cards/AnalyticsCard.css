@@ -23,3 +23,13 @@
 #last-month {
   color: var(--black-60);
 }
+
+@media (min-width: 768px) {
+  .analytics-card {
+    width: 10rem;
+  }
+  .content {
+    display: block;
+    margin: 0 auto;
+  }
+}
