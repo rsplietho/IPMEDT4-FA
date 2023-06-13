@@ -55,6 +55,13 @@
   transition: border-color ease-out 0.12s, box-shadow ease-out 0.12s;
   margin-bottom: 0.5rem;
 }
+.input.error {
+  border-color: red;
+  margin-bottom: 0.1rem;
+}
+.error {
+  text-align: left;
+}
 
 fieldset {
   border: none;
