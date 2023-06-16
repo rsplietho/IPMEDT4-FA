@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Calendar from 'react-calendar';
 import '../../styles/components/agenda/agenda.css';
 
-const Agenda_comp = () => {
+const Agenda_comp = ({onSelectDate}) => {
     const [date, setDate] = useState(new Date());
     
     const specialDays = [
@@ -24,13 +24,18 @@ const Agenda_comp = () => {
         );
       };
 
+      const handleDateChange = (date) => {
+        setDate(date);
+        onSelectDate(date); // Roep de callback-functie aan met de geselecteerde datum
+      };  
+
     return (
         <div className='app'>
           <h1 className='text-center'>Calendar</h1>
           <div className='calendar-container'>
             
             <Calendar 
-            onChange={setDate}
+            onChange={handleDateChange}
             value={date}
             locale="nl-NL"
             tileClassName={tileClassName}

@@ -37,7 +37,7 @@ export const getReservationsReducer = (
     case GET_RESERVATIONS_REQUEST:
       return { loading: true };
     case GET_RESERVATIONS_SUCCESS:
-      return { loading: false, cars: action.payload, success: true };
+      return { loading: false, reservations: action.payload, success: true };
     case GET_RESERVATIONS_FAIL:
       return { loading: false, error: action.payload };
     case GET_RESERVATIONS_RESET:

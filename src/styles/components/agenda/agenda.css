@@ -47,7 +47,7 @@
 
 button{
     padding: 0px;
-    width: auto;
+    width: fit-content;
 }
 
 .text-center{
