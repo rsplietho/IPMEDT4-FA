@@ -36,7 +36,7 @@ const Agenda_comp = () => {
             tileClassName={tileClassName}
             />
           </div>
-          <p className='text-center1'>  
+          {/* <p className='text-center1'>  
           <span className='day'>
             {date.toLocaleDateString('nl-NL', {
             day: 'numeric',
@@ -49,7 +49,7 @@ const Agenda_comp = () => {
                 })}    
                 </span>   
             
-          </p>
+          </p> */}
         </div>
       );
     }
