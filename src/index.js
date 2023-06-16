@@ -14,6 +14,8 @@ import { Provider } from 'react-redux';
 import AllCars from './components/ui/cars/AllCars';
 import Login from './views/Login';
 import Bookings from './views/Bookings';
+import IncomeAnalytics from './views/IncomeAnalytics';
+import ReservationAnalytics from './views/ReservationAnalytics';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -24,6 +26,8 @@ const router = createBrowserRouter(
       <Route path='/testing' element={<AllCars />} />
       <Route path='/login' element={<Login />} />
       <Route path='/bookings' element={<Bookings/>}/>
+      <Route path='/income' element={<IncomeAnalytics />} />
+      <Route path='/reservations' element={<ReservationAnalytics />} />
     </Route>
   )
 );

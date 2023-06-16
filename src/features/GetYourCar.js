@@ -2,14 +2,26 @@ import axios from 'axios';
 const GET_YOUR_CARS_REQUEST = 'GET_YOUR_CARS_REQUEST';
 const GET_YOUR_CARS_SUCCESS = 'GET_YOUR_CARS_SUCCESS';
 const GET_YOUR_CARS_FAIL = 'GET_YOUR_CARS_FAIL';
-const GET_YOUR_CARS_RESET = 'GET_YOUR_CARS_RESET';
-export const getYourCars = () => async (dispatch) => {
+export const GET_YOUR_CARS_RESET = 'GET_YOUR_CARS_RESET';
+export const getYourCars = () => async (dispatch, getState) => {
   try {
     dispatch({
       type: GET_YOUR_CARS_REQUEST,
     });
+    const {
+      userLogin: { userInfo },
+    } = getState();
 
-    const { data } = await axios.get(`http://localhost:8000/api/usercars`, 2);
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    };
+    const { data } = await axios.get(
+      `http://localhost:8000/api/usercars`,
+      config
+    );
 
     dispatch({
       type: GET_YOUR_CARS_SUCCESS,

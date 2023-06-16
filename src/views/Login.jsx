@@ -2,8 +2,14 @@ import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import '../styles/ui/Auth/auth.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../features/UserLogin';
+import Alert from '../components/ui/Alert';
 
 const Login = () => {
+  const userLogin = useSelector((state) => state.UserLogin);
+  const { loading, error, userInfo } = userLogin;
+  const dispatch = useDispatch();
   const initialValues = {
     email: '',
     password: '',
@@ -18,12 +24,13 @@ const Login = () => {
 
   const handleSubmit = (values, { setSubmitting }) => {
     // Perform login logic
-    console.log(values);
+    dispatch(login({ email: values.email, password: values.password }));
     setSubmitting(false);
   };
 
   return (
     <section className='container wrapper'>
+      {error ? <Alert message={error} type='warning' /> : null}
       <section className='auth-container'>
         <h4>Welcome back</h4>
         <div className='devider'>

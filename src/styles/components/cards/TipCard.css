@@ -5,6 +5,17 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
+.flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.help {
+  width: 24px;
+  height: 24px;
+  fill: var(--secondary-tint-1);
+}
 
 @media (min-width: 768px) {
   .tip-card {
