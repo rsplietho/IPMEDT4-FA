@@ -1,45 +1,66 @@
-import React, { useEffect, useState } from 'react'
-import Agenda_comp from '../components/agenda/Agenda_comp'
-import Car_cards from '../components/agenda/Car_cards'
+import React, { useEffect, useState } from 'react';
+import AgendaComp from '../components/agenda/AgendaComp';
+import CarCards from '../components/agenda/CarCards';
 import { useDispatch, useSelector } from 'react-redux';
 import { getReservations } from '../features/ReservationState';
+import { getCars } from '../features/AllCars';
 
+function Bookings() {
+  const AllReservations = useSelector((state) => state.AllReservations);
+  const { reservations, success, error } = AllReservations;
+  const AllCars = useSelector((state) => state.AllCars);
+  const { cars } = AllCars;
+  const [selectedDate, setSelectedDate] = useState(null);
+  const dispatch = useDispatch();
 
-function Bookings () {
-    const AllReservations = useSelector((state) => state.AllReservations);
-    const { reservations, success, error } = AllReservations;
-    const [selectedDate, setSelectedDate] = useState(null);
-    const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getReservations());
+    dispatch(getCars());
+  }, []);
 
-    useEffect(() => {
-        dispatch(getReservations());
-      }, []);
+  const handleDateSelection = (date) => {
+    setSelectedDate(date);
+  };
 
-    const handleDateSelection = (date) => {
-        setSelectedDate(date);
-      }; 
+  if (reservations === undefined) {
+    return <h1>Loading...</h1>;
+  }
 
-      if (reservations === undefined) {
-        return <div>Loading...</div>;
-      }
-
-      const filteredReservations = reservations.filter((reservation) => {
-        // Filter de reserveringen op basis van de geselecteerde datum
-        return (
-          selectedDate &&
-          selectedDate.toDateString() ===
-            new Date(reservation.start_date).toDateString()
-        );
-      });
+  const filteredReservations = reservations.filter((reservation) => {
+    // Filter de reserveringen op basis van de geselecteerde datum
+    return (
+      selectedDate &&
+      selectedDate.toDateString() ===
+        new Date(reservation.start_date).toDateString()
+    );
+  });
 
   return (
     <section className='container'>
-      <Agenda_comp onSelectDate={handleDateSelection}/>
+      <AgendaComp onSelectDate={handleDateSelection} />
       {filteredReservations?.map((reservation) => (
-            <Car_cards name_car={reservation.name_car} start_date={reservation.start_date} end_date={reservation.end_date} price={reservation.price} rentee_id={reservation.rentee_id}/>
+        <>
+          {cars?.map((car) => (
+            <>
+              {car.id === reservation.car_id ? (
+                <>
+                  {console.log('True')}
+                  <CarCards
+                    key={reservation._id}
+                    name_car={car.nickname}
+                    start_date={reservation.start_date}
+                    end_date={reservation.end_date}
+                    price={reservation.price}
+                    rentee_id={reservation.rentee_id}
+                  />
+                </>
+              ) : null}
+            </>
           ))}
+        </>
+      ))}
     </section>
-  )
+  );
 }
 
-export default Bookings
+export default Bookings;
