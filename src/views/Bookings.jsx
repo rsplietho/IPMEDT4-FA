@@ -44,7 +44,6 @@ function Bookings() {
             <>
               {car.id === reservation.car_id ? (
                 <>
-                  {console.log('True')}
                   <CarCards
                     key={reservation._id}
                     name_car={car.nickname}
