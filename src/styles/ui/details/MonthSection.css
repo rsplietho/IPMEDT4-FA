@@ -9,8 +9,13 @@
   flex-direction: row;
   position: relative;
   align-items: center;
+  justify-content: center;
 }
-
+.month-selector > h2 {
+  margin-top: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 h2 {
   width: fit-content;
 }

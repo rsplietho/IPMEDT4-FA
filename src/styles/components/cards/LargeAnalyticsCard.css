@@ -21,3 +21,12 @@
   display: flex;
   margin: 2rem auto;
 }
+
+@media (min-width: 768px) {
+  .large-analytics-card {
+    height: 15rem;
+  }
+  .large-analytics-card > .flex {
+    max-width: 50%;
+  }
+}
