@@ -12,7 +12,8 @@
   justify-content: center;
 }
 .month-selector > h2 {
-  margin-top: 0;
+  color: white;
+  margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
