@@ -6,7 +6,10 @@ const MobileNavBar = () => {
   return (
     <header>
       <nav>
-        <Logo className='mob-logo' />
+        <Link to={'/'} className='link-fix'>
+          <Logo className='mob-logo' />
+        </Link>
+
         <ul className='flex mob-hidden'>
           <li>
             <Link to={'/'}> Dashboard</Link>

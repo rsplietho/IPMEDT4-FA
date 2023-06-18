@@ -7,9 +7,10 @@ nav {
 }
 .mob-logo {
   transform: scale(0.3);
+}
+.link-fix {
   width: 100%;
 }
-
 .mob-hidden {
   display: flex;
 }
