@@ -17,6 +17,7 @@ import Bookings from './views/Bookings';
 import IncomeAnalytics from './views/IncomeAnalytics';
 import ReservationAnalytics from './views/ReservationAnalytics';
 import NotFound from './views/NotFound';
+import Profile from './views/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path='/bookings' element={<Bookings />} />
       <Route path='/income' element={<IncomeAnalytics />} />
       <Route path='/reservations' element={<ReservationAnalytics />} />
+      <Route path='/profile' element={<Profile />} />
     </Route>
   )
 );

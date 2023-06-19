@@ -1,0 +1,30 @@
+.profile-hero {
+  margin: 4rem 0;
+  background-color: var(--secondary-tint-1);
+  height: 25vh;
+  width: 100%;
+  border-radius: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  box-shadow: var(--shadow-6);
+  width: 70px;
+  height: 70px;
+}
+
+.profile-hero > section > h1 {
+  margin-bottom: 0rem;
+}
+.profile-hero > section {
+  text-align: center;
+}
+.profile-hero > section > p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
