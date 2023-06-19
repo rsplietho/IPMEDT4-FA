@@ -9,7 +9,7 @@ export const getCars = () => async (dispatch) => {
       type: GET_CARS_REQUEST,
     });
 
-    const { data } = await axios.get(`http://localhost:8000/api/cars`);
+    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/cars`);
 
     dispatch({
       type: GET_CARS_SUCCESS,

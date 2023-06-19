@@ -39,24 +39,24 @@ function Bookings() {
     <section className='container'>
       <AgendaComp onSelectDate={handleDateSelection} />
       {filteredReservations?.map((reservation) => (
-        <>
+        <div key={reservation.id}>
           {cars?.map((car) => (
-            <>
-              {car.id === reservation.car_id ? (
-                <>
+            <div key={car.id}>
+              {car.id == reservation.car_id ? (
+                <div>
                   <CarCards
-                    key={reservation._id}
+                    key={reservation.id}
                     name_car={car.nickname}
                     start_date={reservation.start_date}
                     end_date={reservation.end_date}
                     price={reservation.price}
                     rentee_id={reservation.rentee_id}
                   />
-                </>
+                </div>
               ) : null}
-            </>
+            </div>
           ))}
-        </>
+        </div>
       ))}
     </section>
   );

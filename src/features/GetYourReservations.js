@@ -10,7 +10,7 @@ export const getYourReservations = () => async (dispatch) => {
     });
 
     const { data } = await axios.get(
-      `http://localhost:8000/api/userreservations`,
+      `${process.env.REACT_APP_API_URL}/userreservations`,
       1
     );
 

@@ -12,7 +12,7 @@ export const CarDetails = (id) => async (dispatch) => {
     });
 
     const { data } = await axios.get(
-      `http://localhost:8000/api/reservations/${id}`
+      `${process.env.REACT_APP_API_URL}/reservations/${id}`
     );
 
     dispatch({

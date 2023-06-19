@@ -21,7 +21,7 @@ export const YourDetails = () => async (dispatch, getState) => {
       },
     };
     const { data } = await axios.get(
-      `${process.env.REACT_API_URL}/api/user`,
+      `${process.env.REACT_API_URL}/user`,
       config
     );
 

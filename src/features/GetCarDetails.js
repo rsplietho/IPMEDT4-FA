@@ -11,7 +11,9 @@ export const CarDetails = (id) => async (dispatch) => {
       type: CAR_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`http://localhost:8000/api/cars/${id}`);
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_API_URL}/cars/${id}`
+    );
 
     dispatch({
       type: CAR_DETAILS_SUCCESS,
