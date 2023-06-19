@@ -97,7 +97,10 @@ hr {
     border-top: 1px solid rgba(0,0,0,.1);
 }
 
-
+ul {
+  text-decoration: none;
+  list-style: none;
+}
 @media (max-width: 450px) {
   .container {
     max-width: 80vw;

@@ -13,17 +13,21 @@ import Home from './views/Home';
 import { Provider } from 'react-redux';
 import AllCars from './components/ui/cars/AllCars';
 import Login from './views/Login';
+import Bookings from './views/Bookings';
 import IncomeAnalytics from './views/IncomeAnalytics';
 import ReservationAnalytics from './views/ReservationAnalytics';
+import NotFound from './views/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
+      <Route path='*' element={<NotFound />} />
       <Route path='' element={<Home />} />
       <Route path='/testing' element={<AllCars />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/bookings' element={<Bookings />} />
       <Route path='/income' element={<IncomeAnalytics />} />
       <Route path='/reservations' element={<ReservationAnalytics />} />
     </Route>

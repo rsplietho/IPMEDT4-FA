@@ -9,8 +9,14 @@
   flex-direction: row;
   position: relative;
   align-items: center;
+  justify-content: center;
 }
-
+.month-selector > h2 {
+  color: white;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 h2 {
   width: fit-content;
 }

@@ -8,6 +8,7 @@ import { YourDetailsReducer } from './features/GetYourDetails';
 import { LoginReducer } from './features/UserLogin';
 import { getReservationsReducer } from './features/ReservationState';
 import { getYourReservationsReducer } from './features/GetYourReservations';
+import { monthReducer } from './features/MonthSelector';
 const reducer = combineReducers({
   AllCars: getCarsReducer,
   CarDetails: CarDetailsReducer,
@@ -17,6 +18,7 @@ const reducer = combineReducers({
   AllReservations: getReservationsReducer,
   Reservation: getReservationsReducer,
   YourReservations: getYourReservationsReducer,
+  Month: monthReducer,
 });
 const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))

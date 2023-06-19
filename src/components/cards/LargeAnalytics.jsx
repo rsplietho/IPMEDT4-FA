@@ -1,6 +1,7 @@
 import TipCard from './TipCard';
 import '../../styles/components/cards/LargeAnalyticsCard.css';
 const LargeAnalytics = ({ value, expectedValue, name, tip, type }) => {
+  console.log({ expectedValue, value });
   return (
     <>
       <h2 className='analytics-title'>{name}</h2>

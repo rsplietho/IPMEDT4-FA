@@ -9,6 +9,7 @@
 }
 .booking-today > h2 {
   color: var(--black-85);
+  margin: 2rem auto;
 }
 
 .booking-today > p {

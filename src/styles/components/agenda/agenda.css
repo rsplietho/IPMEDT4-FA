@@ -1,0 +1,116 @@
+.react-calendar__month-view__days__day--neighboringMonth{
+    color: #C5CBCD;
+}
+
+.react-calendar__navigation .react-calendar__navigation__next2-button {
+    display: none;
+  }
+
+.react-calendar__navigation .react-calendar__navigation__prev2-button {
+    display: none;
+  }
+  .react-calendar__navigation__next-button {
+    font-size: 3rem;
+    height: auto;
+    padding-right: 1.2rem;
+}
+.react-calendar__navigation__prev-button {
+    height: auto;
+    font-size: 3rem;
+    padding-left: 1.2rem;
+}
+.react-calendar__navigation__label{
+    height: auto;
+    transform: translateY(10%)
+}
+.react-calendar__navigation__label__labelText--from{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #242729;
+}
+
+.react-calendar__navigation{
+    display: flex
+}
+
+.react-calendar__month-view__weekdays__weekday{
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #242729;
+    background-color: #efefef;
+}
+
+button{
+    padding: 0px;
+    width: fit-content;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-center1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px 1px #C5CBCD;
+    font-weight: 600;
+    font-size: 18px;
+    
+}
+
+.react-calendar__tile--active {
+    background-color: #0081B7;
+    color: white;
+    border-radius: 100%;
+  }
+
+  .text-center1 .day {
+    text-align: center;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.9rem;
+    border-radius: 50%;
+    background-color: #0081B7;
+    color: #FFFFFF;
+    margin-right: 25px;
+    font-size: 0.9rem;
+  }
+  
+
+.text-center1 .month{
+    color: #242729;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.65;
+}
+
+.special-day{
+    border-radius: 100%;
+    border: 2px solid #0081B7;
+}
+
+
+
+.react-calendar__month-view__days{
+    background-color:#efefef;
+}
+
+.react-calendar{
+    background-color: #efefef;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.calendar-container{
+    margin-bottom: 20px;
+}

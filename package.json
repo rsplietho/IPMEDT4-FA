@@ -12,6 +12,7 @@
     "chartjs-adapter-date-fns": "^3.0.0",
     "formik": "^2.4.1",
     "react": "^18.2.0",
+    "react-calendar": "^4.3.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.7",
