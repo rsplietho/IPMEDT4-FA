@@ -40,9 +40,9 @@ const AnalyticsSection = ({ type }) => {
   };
 
   const getValuesByMonth = () => {
-    if (text === 'Next Month') {
+    if (text === 'Next month') {
       return nextMonthValues;
-    } else if (text === 'Previous Month') {
+    } else if (text === 'Previous month') {
       return previousMonthValues;
     } else {
       return currentMonthValues;
@@ -128,20 +128,23 @@ const AnalyticsSection = ({ type }) => {
     currentMonthValues
   ) => {
     if (text === 'Previous month') {
+      console.log('prev month');
       return {
         expectedValue: previousMonthValues.resExp,
         value: previousMonthValues.resValue,
       };
     }
     if (text === 'Next month') {
+      console.log('Next month');
       return {
         expectedValue: nextMonthValues.resExp,
         value: nextMonthValues.resValue,
       };
     } else {
+      console.log('Current month');
       return {
-        expectedValue: currentMonthValues?.resExp,
-        value: currentMonthValues?.resValue,
+        expectedValue: currentMonthValues.resExp,
+        value: currentMonthValues.resValue,
       };
     }
   };
@@ -155,8 +158,8 @@ const AnalyticsSection = ({ type }) => {
               <LargeAnalytics
                 {...getIncomeValues(
                   previousMonthValues,
-                  currentMonthValues,
-                  nextMonthValues
+                  nextMonthValues,
+                  currentMonthValues
                 )}
                 name={'Income'}
                 tip={'You are up 20% MoM, Great work!'}
@@ -164,8 +167,8 @@ const AnalyticsSection = ({ type }) => {
               <LargeAnalytics
                 {...getStationaryTimeValues(
                   previousMonthValues,
-                  currentMonthValues,
-                  nextMonthValues
+                  nextMonthValues,
+                  currentMonthValues
                 )}
                 name={'Stationary Time'}
                 type='negative'
@@ -174,8 +177,8 @@ const AnalyticsSection = ({ type }) => {
               <LargeAnalytics
                 {...getConversionRatioValues(
                   previousMonthValues,
-                  currentMonthValues,
-                  nextMonthValues
+                  nextMonthValues,
+                  currentMonthValues
                 )}
                 name={'Conversion Rate'}
                 tip={'You are doing better than expected'}
@@ -186,8 +189,8 @@ const AnalyticsSection = ({ type }) => {
             <LargeAnalytics
               {...getReservationsValues(
                 previousMonthValues,
-                currentMonthValues,
-                nextMonthValues
+                nextMonthValues,
+                currentMonthValues
               )}
               name={'Reservations'}
               tip={'You are up 20% MoM, Great work!'}
