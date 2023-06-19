@@ -1,8 +1,6 @@
 .card {
   border-radius: 15px;
 
-  margin-left: 4rem;
-  margin-right: 4rem;
   margin-bottom: 2rem;
   padding-bottom: 0%;
   background: var(--white);
@@ -24,4 +22,11 @@
   padding-left: 1rem;
   margin: 0;
   color: var(--black-50);
+}
+
+@media (min-width:1024px) {
+  .card {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }

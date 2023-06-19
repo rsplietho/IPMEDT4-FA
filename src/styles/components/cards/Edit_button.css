@@ -1,8 +1,6 @@
 .buttonContainer {
   display: flex;
   justify-content: space-between;
-  margin-left: 4rem;
-  margin-right: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -28,6 +26,10 @@
     place-items: center;
     width: 10rem;
     height: 10rem;
+  }
+  .buttonContainer {
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
   .button > h2 {
     font-size: 2rem;
