@@ -23,7 +23,7 @@ export const toggleSecondSVG = () => {
 
 // Reducer
 const initialState = {
-  text: 'This month',
+  text: 'Current month',
   showFirstSVG: true,
   showSecondSVG: true,
 };

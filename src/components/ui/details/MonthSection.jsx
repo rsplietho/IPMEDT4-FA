@@ -8,16 +8,14 @@ import {
   toggleSecondSVG,
   updateText,
 } from '../../../features/MonthSelector';
+
 const MonthSection = () => {
   const dispatch = useDispatch();
-  const { text, showFirstSVG, showSecondSVG } = useSelector(
-    (state) => state.Month
-  );
-  console.log(text);
+  const { text } = useSelector((state) => state.Month);
+
   const handleFirstSVGClick = () => {
-    if (text === 'This month') {
+    if (text === 'Current month') {
       dispatch(updateText('Previous month'));
-      dispatch(toggleFirstSVG());
     } else if (text === 'Next month') {
       dispatch(updateText('Current month'));
     }
@@ -26,23 +24,14 @@ const MonthSection = () => {
   const handleRightArrowClick = () => {
     if (text === 'Previous month') {
       dispatch(updateText('Current month'));
-      dispatch(toggleFirstSVG());
     } else if (text === 'Current month') {
       dispatch(updateText('Next month'));
-      dispatch(toggleSecondSVG());
-    }
-  };
-
-  const handleSecondSVGClick = () => {
-    if (text === 'Next month') {
-      dispatch(updateText('Current month'));
-      dispatch(toggleSecondSVG());
     }
   };
 
   return (
     <section className='month-selector'>
-      {showFirstSVG && (
+      {text !== 'Previous month' && (
         <ArrowLeft
           style={{
             transform: 'scale(2)',
@@ -54,7 +43,7 @@ const MonthSection = () => {
         />
       )}
       <h2>{text}</h2>
-      {showSecondSVG && (
+      {text !== 'Next month' && (
         <ArrowRight
           style={{
             transform: 'scale(2)',
