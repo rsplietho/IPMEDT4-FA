@@ -37,5 +37,15 @@
   .button > h2 {
     font-size: 2rem;
     margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .button > h2 {
+    margin-bottom: 0.5rem;
+  }
+  .button > svg {
+    transform: scale(1) !important;
   }
 }

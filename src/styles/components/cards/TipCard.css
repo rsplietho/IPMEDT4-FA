@@ -24,3 +24,8 @@
     margin: 0 auto;
   }
 }
+@media (min-width: 1024px) {
+  .tip-card {
+    margin: 1rem 0;
+  }
+}

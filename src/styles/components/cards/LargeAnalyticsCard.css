@@ -30,3 +30,12 @@
     max-width: 50%;
   }
 }
+@media (min-width: 1024px) {
+  .large-analytics-card {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+  .large-analytics-card > .flex {
+    max-width: 100%;
+  }
+}

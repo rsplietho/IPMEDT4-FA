@@ -5,3 +5,10 @@
   margin-top: 2rem;
   padding: 0.5rem;
 }
+
+@media (min-width: 1024px) {
+  .graph-card {
+    max-width: 50%;
+    margin: 4rem auto;
+  }
+}

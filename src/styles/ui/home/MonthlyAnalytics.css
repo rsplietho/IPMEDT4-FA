@@ -1,5 +1,6 @@
 .monthly-analytics {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .monthly-analytics > h2 {
@@ -17,7 +18,7 @@
   place-items: center;
 }
 
-@media (min-width: 768px) and (max-width: 2000px) {
+@media (min-width: 1024px) and (max-width: 2000px) {
   .analytics-grid {
     max-width: 50%;
     display: grid;

@@ -8,11 +8,27 @@ const LargeAnalytics = ({ value, expectedValue, name, tip, type }) => {
       <div className='large-analytics-card'>
         <section className='values'>
           <div>
-            <h3>{value}</h3>
+            <h3>
+              {name === 'Income' ? '€' : null}
+              {value}
+              {name === 'Conversion Rate'
+                ? '%'
+                : name === 'Stationary Time'
+                ? 'h'
+                : null}
+            </h3>
             <p>So far</p>
           </div>
           <div>
-            <h3>{expectedValue}</h3>
+            <h3>
+              {name === 'Income' ? '€' : null}
+              {expectedValue}
+              {name === 'Conversion Rate'
+                ? '%'
+                : name === 'Stationary Time'
+                ? 'h'
+                : null}
+            </h3>
             <p>Expected</p>
           </div>
         </section>
