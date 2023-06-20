@@ -124,3 +124,36 @@ button.react-calendar__tile--active {
 .calendar-container{
     margin-bottom: 20px;
 }
+
+@media (min-width: 576px){
+    .react-calendar__month-view__days button{
+        margin: 3.3px 0 3.3px 13px;
+    }
+
+    .react-calendar__month-view__days button{
+        flex: 0 0 10.5% !important;
+    }
+
+@media (min-width: 768px){
+    .react-calendar__month-view__days button{
+        margin: 3.3px 0 3.3px 22.5px;
+    }
+
+    .react-calendar__month-view__days button{
+        flex: 0 0 9% !important;
+    }
+}
+
+@media (min-width: 1024px){
+    .react-calendar__month-view__days button{
+        margin: 3.3px;
+        margin-left: 39px;
+        margin-right: 39px;
+    }
+
+    .react-calendar__month-view__days button{
+        flex: 0 0 6.3% !important;
+    }
+}    
+
+}

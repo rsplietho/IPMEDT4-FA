@@ -38,27 +38,32 @@ function Bookings() {
   return (
     <section className='container'>
       <AgendaComp onSelectDate={handleDateSelection} />
-      {filteredReservations?.map((reservation) => (
+      {filteredReservations.length > 0 ? (
         <>
-          {cars?.map((car) => (
-            <>
-              {car.id === reservation.car_id ? (
-                <>
-                  {console.log('True')}
-                  <CarCards
-                    key={reservation._id}
-                    name_car={car.nickname}
-                    start_date={reservation.start_date}
-                    end_date={reservation.end_date}
-                    price={reservation.price}
-                    rentee_id={reservation.rentee_id}
-                  />
-                </>
-              ) : null}
-            </>
+          {filteredReservations?.map((reservation) => (
+            <div key={reservation.id}>
+              {cars?.map((car) => (
+                <div key={car.id}>
+                  {car.id == reservation.car_id ? (
+                    <div>
+                      <CarCards
+                        key={reservation.id}
+                        name_car={car.nickname}
+                        start_date={reservation.start_date}
+                        end_date={reservation.end_date}
+                        price={reservation.price}
+                        rentee_id={reservation.rentee_id}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
           ))}
         </>
-      ))}
+      ) : (
+        <h2 style={{ margin: '0 auto' }}>No Bookings Today</h2>
+      )}
     </section>
   );
 }
