@@ -62,9 +62,6 @@
   right: 10%;
   bottom: 3%;
 }
-.hero-card > h2 {
-  margin-top: 0;
-}
 
 @media (min-width: 768px) and (max-width: 1080px) {
   .car {
@@ -100,5 +97,8 @@
   }
   .hidden {
     display: none;
+  }
+  .hero-card > h2 {
+    margin-top: 0;
   }
 }
